@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Chuyện xưa Đà Thành</title>
+    <link rel="stylesheet" href="langnghestyling.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .region {padding: 20px; border-style: solid;}
+        .header {background-color: lightcyan;}
+        .navigation_menu {background-color: lightcyan; height: 50px;}
+        .content {background-color: lightsalmon; height: 300px;}
+        .footer {background-color: lightgray;}
+    </style>
+</head>
+
+<body>
+	<header class="navbar">
+        <a href="index.html"><img src="logo.jpg" class="logo"></a>
+        <a href="lntt.html" class="navbar-item" data-translate="lntt">Làng nghề</a>
+        <a href="skls.html" class="navbar-item" data-translate="skls">Sự kiện lịch sử</a>
+        <a href="cvls.html" class="navbar-item" data-translate="cvls">Cổ vật lịch sử</a>
+        <a href="nvls.html" class="navbar-item" data-translate="nvls">Nhân vật lịch sử</a>
+        <a href="btls.html" class="navbar-item" data-translate="btls">Bảo tàng lịch sử</a>
+        <a href="lhtt.html" class="navbar-item" data-translate="lhtt">Lễ hội truyền thống</a> 
+        <form class="navbar-search" action="search.html" method="GET">
+            <input type="text" name="query" placeholder="Search..." class="search-input" required>
+            <button type="submit" class="search-button">
+                <i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i>
+            </button>
+        </form>
+        
+        <div class="lang-menu">
+            <div class="selected-lang">
+                <span class="lang-name">Việt Nam</span>
+                <span class="lang-flag"></span>
+            </div>
+            <ul>
+                <li class="vn">
+                    <a href="#" class="vn" data-lang="vn" onclick="changeLanguage('vi')">
+                        <span class="flag-icon" style="background-image: url('https://flagsapi.com/VN/flat/64.png');"></span>
+                        Việt Nam
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="en" data-lang="en" onclick="changeLanguage('en')">
+                        <span class="flag-icon" style="background-image: url('https://flagsapi.com/GB/flat/64.png');"></span>
+                        English
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+	
+	<main class="main-content">
+        <section class="hero-image">
+            <img src="chieucamne.jpg" alt="Ảnh chiếu">
+        </section>
+        <article class="article">
+                
+                <section class="article-section">
+                <h1 class="article-title">Chiếu Cẩm Nê</h1>
+                <p class="article-meta"><strong>Thời gian hình thành:</strong> Hình thành từ thời Nguyễn</p>
+                <p class="article-meta"><strong>Địa chỉ:</strong>Xã Cẩm Nê, Quận Ngũ Hành Sơn, Thành phố Đà Nẵng</p>
+            </section>
+            <section class="article-section">
+                <h2>Giới thiệu</h2>
+                <p><strong>Cách làm: </strong>Chiếu Cẩm Nê có rất nhiều kích thước khác nhau, màu sắc và hoa văn cũng có thể tùy theo yêu cầu của khách. Việc chọn cây sậy và thoi đưa cũng được lựa chọn vô cùng kĩ càng, thường là những cây cọ thằng, nhẹ và chắc chắn</p>
+            </section>
+
+            <section class="article-section">
+                <h2>Thành tích</h2>
+                <ul>
+                    <li> Sản phẩm chất lượng cao</li>
+                    <li>Được vua chúa khen thưởng</li>
+                    <li>Điểm du lịch văn hóa</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+	<footer>
+        <div class="row">
+            <div class="col">
+                <img src="logo.jpg" class="logo2">
+            </div>
+            <div class="col">
+                <h3 data-translate="title">Title</h3>
+                <p class="email-id"><i class="fa-regular fa-envelope"></i>ngtrinhan2007@gmail.com</p>
+                <h4><i class="fa-solid fa-phone"></i>0702456721</h4>
+            </div>
+            <div class="col">
+                <h3 data-translate="links-title">Liên kết</h3>
+                <ul>
+                    <li><a href="index.html" data-translate="home-link">Trang chủ</a></li>
+                    <!-- <li><a href="" data-translate="service-link">Service</a></li>
+                    <li><a href="" data-translate="about-link">About Us</a></li>
+                    <li><a href="" data-translate="features-link">Features</a></li> -->
+                </ul>
+            </div>
+            <div class="col">
+                <h3 data-translate="newsletter-title">Đăng kí nhận thông báo</h3>
+                <form>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your Email here" required> 
+                    <button type="submit"><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
+                </form>
+                <h3 data-translate="follow-us-title">Theo dõi chúng tôi tại</h3>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="divide-bar"></div>
+        <p class="copyright">• Copyright © 2024 • NTN - All Rights Reserved</p>
+    </footer>
+</body>
+
+</html> 

@@ -7,9 +7,36 @@ document.getElementById("search-query").textContent = `You searched for: "${quer
 
 // Mock data for search results
 const mockResults = [
-    { title: "History of Da Nang", link: "history.html", snippet: "Explore the rich history of Da Nang, a city with deep cultural roots." },
-    { title: "Ancient Artifacts in Da Nang", link: "artifacts.html", snippet: "Discover ancient artifacts that tell the story of Da Nang's past." },
-    { title: "Festivals in Da Nang", link: "festivals.html", snippet: "Join vibrant festivals celebrated annually in Da Nang." }
+    { 
+        title: "Chiếu Cẩm Nê", 
+        link: "chieucamne.html", 
+        snippet: "Learn about the traditional mat weaving craft of Chiếu Cẩm Nê.", 
+        image: "chieucamne.jpg" 
+    },
+    { 
+        title: "Đá Mỹ Nghệ Non Nước", 
+        link: "damynghenonnuoc.html", 
+        snippet: "Explore the stone carving techniques in Non Nước.", 
+        image: "damynghe.jpg" 
+    },
+    { 
+        title: "Nước Mắm Nam Ô", 
+        link: "nuocmamnamo.html", 
+        snippet: "Discover the traditional fish sauce production in Nam Ô.", 
+        image: "nuocmam.jpg" 
+    },
+    { 
+        title: "Bánh Tráng Túy Loan", 
+        link: "banhtrangtuyloan.html", 
+        snippet: "Taste the famous rice paper from Tuy Loan.", 
+        image: "banhtrang.jpg" 
+    },
+    { 
+        title: "Bánh Khô Mè", 
+        link: "banhkhome.html", 
+        snippet: "Enjoy the delicious Dried Sesame Cake from Da Nang.", 
+        image: "banhkho.jpg" 
+    }
 ];
 
 // Function to filter mock results based on the query
@@ -28,6 +55,13 @@ if (results.length > 0) {
         const item = document.createElement("div");
         item.classList.add("result-item");
 
+        const image = document.createElement("img");
+        image.src = result.image;
+        image.classList.add("result-image");
+
+        const content = document.createElement("div");
+        content.classList.add("result-content");
+
         const title = document.createElement("a");
         title.href = result.link;
         title.classList.add("result-title");
@@ -37,8 +71,10 @@ if (results.length > 0) {
         snippet.classList.add("result-snippet");
         snippet.textContent = result.snippet;
 
-        item.appendChild(title);
-        item.appendChild(snippet);
+        content.appendChild(title);
+        content.appendChild(snippet);
+        item.appendChild(image);
+        item.appendChild(content);
         resultsContainer.appendChild(item);
     });
 } else {
